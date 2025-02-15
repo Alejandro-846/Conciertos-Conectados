@@ -7,7 +7,27 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
+    <header class="header">
+            <div class="menu" >
+                <img src="/storage/icons/menu.svg" class="menu-logo" >
+                <img src="/storage/icons/notificacion.svg" class="notificaciones" >
+            </div>
+            <div class="header-content">
+                <h1 class="h1-f">Find</h1>
+                <h1 class="h1-t">Trending Events</h1>
+            </div>
+    </header>
+    <section class="search">
+        <form action="/buscar" method="GET">
+            <button type="submit" class="bnt-search">
+                <img src="/storage/icons/lupa.svg" class="search-icon">
+            </button>
+            <input type="text" name="query" class="barraBusqueda" placeholder="Search for events...">
+            <button type="submit" class="bnt-search">
+                <img src="/storage/icons/Vector-2.svg" class="search-icon">
+            </button>
+        </form>
+    </section>
 
 </body>
 </html>
