@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrusel Infinito</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .carrusel-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carrusel {
+      display: flex;
+      animation: mover 20s linear infinite;
+    }
+
+    .carrusel div {
+      min-width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4CAF50;
+      color: white;
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+
+    /* Animación para mover el carrusel */
+    @keyframes mover {
+      0% {
+        transform: translateX(0);
+      }
+      50% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .container {
+  position: relative; /* Esto permite que los elementos dentro del div se posicionen respecto a él */
+}
+
+.imagen-grande {
+  width: 100%; /* Puedes ajustar el tamaño de la imagen grande según sea necesario */
+}
+
+.informacion {
+  position: absolute;
+  top: 10px; /* Ajusta la posición según lo necesites */
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mini-imagen {
+  margin: 10px;
+}
+
+.mini-imagen img {
+  width: 50px; /* Ajusta el tamaño de las imágenes pequeñas */
+  height: 50px;
+}
+
+.mini-imagen p {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.carrusel-img {
+    position: relative; /* Necesario para que los elementos internos puedan ser posicionados en relación con este contenedor */
+    width: 100%; /* Asegúrate de que ocupe el 100% del contenedor disponible */
+}
+
+.carrusel-img .img-grande {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.inf {
+    position: absolute; /* Posiciona los elementos dentro de .carrusel-img */
+    top: 10%; /* Ajusta la posición según sea necesario */
+    left: 10%; /* Ajusta la posición según sea necesario */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para los iconos */
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.iconos span {
+    font-family: "Inter-SemiBold";
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.iconos img {
+    width: 20px; /* Ajusta el tamaño de los iconos */
+    height: 20px;
+    margin: 5px 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="carrusel-container">
+    <div class="carrusel">
+      <div>Etiqueta 1</div>
+      <div>Etiqueta 2</div>
+      <div>Etiqueta 3</div>
+      <div>Etiqueta 4</div>
+      <div>Etiqueta 5</div>
+      <div>Etiqueta 6</div>
+      <div>Etiqueta 7</div>
+      <div>Etiqueta 8</div>
+      <div>Etiqueta 9</div>
+      <div>Etiqueta 10</div>
+    </div>
+  </div>
+  <section class="events">
+    <div class="trending">
+        <span>Trending Events</span>
+        <p>See all</p>
+    </div>
+    <div class="carrusel-img">
+        <img src="/storage/img/Rectangle 4105.svg" alt="Evento" class="img-grande">
+        <div class="inf">
+            <div class="iconos">
+                <span>Coldplay: Music of the Spheres</span>
+                <img src="/storage/icons/ubica.svg" alt="Ubicación">
+                <img src="/storage/icons/calendario.svg" alt="Calendario">
+            </div>
+        </div>
+    </div>
+</section>
+
+  </div>
+
+</body>
+</html>

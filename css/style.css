@@ -1,5 +1,16 @@
 @import url(/css/variables.css);
 
+@keyframes mover {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 *{
     margin: 0;
     padding: 0;
@@ -37,7 +48,6 @@
 
 /* Asegura que la barra de búsqueda esté alineada a la izquierda */
 .search {
-    display: flex;
     justify-content: flex-start; /* Alinea todo el contenido a la izquierda */
     padding: 10px;
     width: 100%; /* Ocupa todo el ancho disponible */
@@ -52,6 +62,7 @@
 
 /* Input de búsqueda alineado a la izquierda */
 .barraBusqueda {
+
     flex: 1; /* Hace que el input ocupe el espacio disponible */
     border: none;
     font-size: 12px;
@@ -71,4 +82,106 @@
     width: 15px;
     height: 15px;
 
+}
+
+.carrusel-container {
+    font-family: Inter-Regular;
+    font-size: 12px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.carrusel {
+    display: flex;
+    animation: mover 20s linear infinite;
+}
+.carrusel  div{
+    min-width: 30%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    border-radius: 8px;
+    }
+.music {
+    background: var(--color-blue-pastel);
+}
+.exhibi {
+    background: var(--color-cream);
+}
+.stand {
+    background: var(--color-pink);
+}
+.theater {
+    background: var(--color-mint);
+}
+.events {
+    margin-top: 40px;
+
+}
+.trending {
+    margin:0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: red;
+}
+.trending span{
+    font-family: "Inter-SemiBold";
+    font-size: 14px;
+}
+.trending p{
+    font-family: "Inter-Regular";
+    font-size: 12px;
+
+}
+.carrusel-img{
+    background: blue;
+    margin: 0 15px;
+    position: relative;
+    width: 100%;
+}
+.carrusel-img .img-grande{
+    height: auto;
+}
+.inf{
+    font-family: "Inter-SemiBold";
+    position: absolute;
+    top: 88px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 90px;
+    width: 332px;
+    gap:20px
+}
+.iconos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.iconos span {
+    font-size: 12px;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+.iconos p {
+    font-size: 12px;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+.iconos img {
+    width: 20px; /* Ajusta el tamaño de los iconos */
+    height: 20px;
+    margin: 5px 0;
+}
+.start-from {
+    background: plum;
+    height: 10px;
 }
