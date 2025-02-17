@@ -1,1 +1,74 @@
-@import url(variables.css);
+@import url(/css/variables.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.header{
+
+    /* align-items: center; */
+    background-color: var(--color-blue-30);
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: var(--color-blue-30);
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding: 20px;
+}
+.h1-f{
+    font-family: Inter-SemiBold;
+    font-size: 30px;
+    color: var(--color-black);
+}
+.h1-t{
+    font-family: Inter-SemiBold;
+    font-size: 30px;
+    color: var(--color-purple);
+}
+
+/* Asegura que la barra de búsqueda esté alineada a la izquierda */
+.search {
+    display: flex;
+    justify-content: flex-start; /* Alinea todo el contenido a la izquierda */
+    padding: 10px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Alineación del formulario */
+.search form {
+    display: flex;
+    align-items: center;
+    width: 346px
+}
+
+/* Input de búsqueda alineado a la izquierda */
+.barraBusqueda {
+    flex: 1; /* Hace que el input ocupe el espacio disponible */
+    border: none;
+    font-size: 12px;
+    margin-left: 0; /* Elimina el margen izquierdo */
+}
+
+/* Botón de búsqueda */
+.bnt-search {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+/* Tamaño del icono */
+.search-icon {
+    width: 15px;
+    height: 15px;
+
+}
